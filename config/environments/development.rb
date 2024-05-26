@@ -1,6 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -81,4 +82,6 @@ Rails.application.configure do
   config.hosts << pf_host
 
   config.action_cable.allowed_request_origins = ["https://#{pf_host}"]
+  config.hosts << "17a9419e02c7425db4f5961b9468e092.vfs.cloud9.ap-northeast-1.amazonaws.com"
+  #config.hosts << ENV['C9_HOSTNAME'] if ENV['C9_HOSTNAME']
 end
